@@ -1,0 +1,68 @@
+{
+  "name": "homepage",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "styled-components": "^5.0.1"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "prettier:write": "prettier 'src/**/*.{js,jsx}' --write",
+    "prettier:check": "prettier 'src/**/*.{js,jsx}' --check",
+    "lint:js": "eslint 'src/**/*.{js,jsx}'",
+    "lint:fix": "yarn lint:js --fix",
+    "lint": "yarn lint:js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-runtime": "^6.26.0",
+    "customize-cra": "^0.9.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.17.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^10.0.0-beta.6",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.19.1",
+    "react-app-rewired": "^2.1.5"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "prettier --write",
+      "eslint",
+      "yarn jest --no-watch --passWithNoTests",
+      "git add"
+    ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|css)$": "<rootDir>/__mocks__/fileMock.js",
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
+  }
+}
